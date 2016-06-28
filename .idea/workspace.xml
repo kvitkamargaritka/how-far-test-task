@@ -25,7 +25,7 @@
         <entry file="file://$PROJECT_DIR$/public/scripts/example.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+              <caret line="145" column="44" selection-start-line="145" selection-start-column="44" selection-end-line="145" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -34,9 +34,14 @@
       <file leaf-file-name="app.less" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/styles/app.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.70151305">
-              <caret line="358" column="10" selection-start-line="358" selection-start-column="10" selection-end-line="358" selection-end-column="10" />
-              <folding />
+            <state vertical-scroll-proportion="-0.19257222">
+              <caret line="341" column="3" selection-start-line="341" selection-start-column="3" selection-end-line="341" selection-end-column="3" />
+              <folding>
+                <element signature="e#444#2205#2" expanded="true" />
+                <element signature="e#2276#3985#2" expanded="true" />
+                <element signature="e#4056#5797#2" expanded="true" />
+                <element signature="e#5868#7773#2" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -238,6 +243,8 @@
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="JavaScriptLanguageLevel" value="JSX" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -392,7 +399,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#444#2205#2" expanded="true" />
+            <element signature="e#2276#3985#2" expanded="true" />
+            <element signature="e#4056#5797#2" expanded="true" />
+            <element signature="e#5868#7773#2" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -479,16 +491,21 @@
     <entry file="file://$PROJECT_DIR$/public/scripts/example.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+          <caret line="145" column="44" selection-start-line="145" selection-start-column="44" selection-end-line="145" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/app.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70151305">
-          <caret line="358" column="10" selection-start-line="358" selection-start-column="10" selection-end-line="358" selection-end-column="10" />
-          <folding />
+        <state vertical-scroll-proportion="-0.19257222">
+          <caret line="341" column="3" selection-start-line="341" selection-start-column="3" selection-end-line="341" selection-end-column="3" />
+          <folding>
+            <element signature="e#444#2205#2" expanded="true" />
+            <element signature="e#2276#3985#2" expanded="true" />
+            <element signature="e#4056#5797#2" expanded="true" />
+            <element signature="e#5868#7773#2" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -45,7 +45,7 @@ var App = React.createClass({
   getInitialState: function () {
     return {
       activeTourId: 1,
-      activeRoundId: 1
+      activeRoundId: 2
     };
   },
 
@@ -66,7 +66,25 @@ var App = React.createClass({
       <div className="app">
 
         <div className="container">
-          <div className="app__top"></div>
+          <div className="app__top">
+
+            <div className="app__left">
+
+              <Title />
+
+            </div>
+            <div className="app__center">
+
+              <Steps />
+
+            </div>
+            <div className="app__right">
+
+              <Btn />
+
+            </div>
+
+          </div>
 
           <div className="app__bottom">
 
@@ -96,6 +114,131 @@ var App = React.createClass({
       </div>
     );
   }
+});
+
+var Title = React.createClass ({
+  render: function() {
+
+    return (
+
+      <div>
+        <h3 className="title">
+          golf
+        <span>
+          hole in one
+        </span>
+        </h3>
+      </div>
+
+    );
+  }
+
+});
+
+var Steps = React.createClass ({
+  render: function() {
+    return (
+
+      <div className="steps">
+
+        <ul className="steps__list">
+
+          <li className="steps__el is-active">
+
+            <div className="step">
+
+              <div className="step__top">
+                <div className="step__ico">
+                  <i className="ico ico_cup"></i>
+                </div>
+              </div>
+
+              <div className="step__bottom">
+                <span className="step__text">select round</span>
+              </div>
+
+            </div>
+
+          </li>
+
+          <li className="steps__el">
+
+            <div className="step">
+
+              <div className="step__top">
+                <div className="step__ico">
+                  <i className="ico ico_person"></i>
+                </div>
+              </div>
+
+              <div className="step__bottom">
+                <span className="step__text">select candidates</span>
+              </div>
+
+            </div>
+
+          </li>
+
+          <li className="steps__el">
+
+            <div className="step">
+
+              <div className="step__top">
+                <div className="step__ico">
+                  <i className="ico ico_dollar"></i>
+                </div>
+              </div>
+
+              <div className="step__bottom">
+                <span className="step__text">entry fee</span>
+              </div>
+
+            </div>
+
+          </li>
+
+          <li className="steps__el">
+
+            <div className="step">
+
+              <div className="step__top">
+                <div className="step__ico">
+                  <i className="ico ico_persons"></i>
+                </div>
+              </div>
+
+              <div className="step__bottom">
+                <span className="step__text">invite friends</span>
+              </div>
+
+            </div>
+
+          </li>
+
+        </ul>
+
+      </div>
+
+    );
+
+  }
+
+});
+
+var Btn = React.createClass ({
+  render: function() {
+    var cls = 'btn ';
+
+    return (
+
+      <div className="action">
+        <span className={cls}>exit</span>
+        <span className={cls + 'is-grey'}>next</span>
+      </div>
+
+    );
+  }
+
 });
 
 
