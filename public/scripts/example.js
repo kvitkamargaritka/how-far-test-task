@@ -62,183 +62,133 @@ var App = React.createClass({
   },
 
   render: function () {
+
     return (
       <div className="app">
-
         <div className="container">
           <div className="app__top">
-
             <div className="app__left">
-
               <Title />
-
             </div>
             <div className="app__center">
-
               <Steps />
-
             </div>
             <div className="app__right">
-
               <Btn />
-
             </div>
-
           </div>
-
           <div className="app__bottom">
-
             <div className="app__left">
-
               <h3 className="tournaments__title">tournaments</h3>
-
               <Tournaments
                 tours={this.props.tours}
                 activeTourId={this.state.activeTourId}
                 onTourClick={this.handleTourClick}/>
-
             </div>
-
             <div className="app__right">
-
               <Rounds
                 rounds={this.props.rounds}
                 activeRoundId={this.state.activeRoundId}
                 onRoundClick={this.handleRoundClick}/>
-
             </div>
-
           </div>
         </div>
-
       </div>
     );
   }
 });
 
 var Title = React.createClass ({
+
   render: function() {
 
     return (
-
-      <div>
-        <h3 className="title">
-          golf
-        <span>
-          hole in one
-        </span>
-        </h3>
-      </div>
-
+      <h3 className="title">
+        golf
+      <span>
+        hole in one
+      </span>
+      </h3>
     );
   }
-
 });
 
 var Steps = React.createClass ({
+
   render: function() {
+
     return (
-
       <div className="steps">
-
         <ul className="steps__list">
-
           <li className="steps__el is-active">
-
             <div className="step">
-
               <div className="step__top">
                 <div className="step__ico">
                   <i className="ico ico_cup"></i>
                 </div>
               </div>
-
               <div className="step__bottom">
                 <span className="step__text">select round</span>
               </div>
-
             </div>
-
           </li>
 
           <li className="steps__el">
-
             <div className="step">
-
               <div className="step__top">
                 <div className="step__ico">
                   <i className="ico ico_person"></i>
                 </div>
               </div>
-
               <div className="step__bottom">
                 <span className="step__text">select candidates</span>
               </div>
-
             </div>
-
           </li>
 
           <li className="steps__el">
-
             <div className="step">
-
               <div className="step__top">
                 <div className="step__ico">
                   <i className="ico ico_dollar"></i>
                 </div>
               </div>
-
               <div className="step__bottom">
                 <span className="step__text">entry fee</span>
               </div>
-
             </div>
-
           </li>
 
           <li className="steps__el">
-
             <div className="step">
-
               <div className="step__top">
                 <div className="step__ico">
                   <i className="ico ico_persons"></i>
                 </div>
               </div>
-
               <div className="step__bottom">
                 <span className="step__text">invite friends</span>
               </div>
-
             </div>
-
           </li>
-
         </ul>
-
       </div>
-
     );
-
   }
-
 });
 
 var Btn = React.createClass ({
+
   render: function() {
     var cls = 'btn ';
 
     return (
-
       <div className="action">
         <span className={cls}>exit</span>
         <span className={cls + 'is-grey'}>next</span>
       </div>
-
     );
   }
-
 });
 
 
@@ -250,6 +200,7 @@ var Tournaments = React.createClass({
 
   render: function () {
     var items = this.props.tours.map(function (t) {
+
       return (
         <Tournament
           id={t.id}
@@ -313,12 +264,12 @@ var Tournament = React.createClass({
 
 
 var Prize = React.createClass({
+
   render: function () {
 
     return (
       <div className="prize">
         <p className="prize__sum">{this.props.value}</p>
-
         <p className="prize__text">{this.props.label}</p>
       </div>
     );
@@ -326,6 +277,7 @@ var Prize = React.createClass({
 });
 
 var Location = React.createClass({
+
   render: function () {
 
     return (
@@ -338,6 +290,7 @@ var Location = React.createClass({
 });
 
 var DateTime = React.createClass({
+
   render: function () {
 
     return (

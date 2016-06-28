@@ -1,7 +1,6 @@
 // Core
 @import "core/reset.less";
 @import "core/variables.less";
-@import "core/mixins.less";
 
 
 // Blocks
@@ -9,7 +8,7 @@
 body {
   font-size: 13px;
   line-height: 1.4;
-  font-family: 'Lato', sans-serif;
+  font-family: @lato;
   user-select: none;
   background-image: url("../img/bg.png");
   background-size: cover;
@@ -25,8 +24,7 @@ img {
 }
 
 .ico {
-  display: inline-block;
-  vertical-align: middle;
+  display: inline-flex;
 
   &_cup {
     background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA4ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo2YjZjNjk1OC02OTczLWRiNDQtOGM2YS01YjlmMGIzZWZlOTkiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MDk3NzIwRTYzMjMwMTFFNjhCNTBEQjJFQkU5OUFFODgiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDk3NzIwRTUzMjMwMTFFNjhCNTBEQjJFQkU5OUFFODgiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1NWQ0OGQ0ZS0xZGExLTQ5ZGMtOWI5MC03OGZhNjNmMDdkZTciIHN0UmVmOmRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDoxNTMwMjZkMS02ZTBiLTExNzktYmQyZS1hNmE4Y2FiNWU4M2MiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4XEoPhAAABI0lEQVR42mK8+uE6AxqoB+I6IGZiwAR/gLgZiJuQBRmBhqwC0i5IYrxAzMKAG4AM+ozE3wsy5D8DZeA/spN9gNgEiC8Q0HQBqs4H5huQIT+gnIdAfBaIvxAw5AtU3X0o/yfIkMtQThaJ3siE0hdBYRIMZKyBCpwGYjkgFsej+RUQP4J6CQRCGKFRXAzEHQRiBVssVQJxDyNSOpGHBlYkEFvj0XwEiFcA8WaoixgYsSQ2PWjAYXPVXyA2BeLzyILYUuUlaKD9QRP/DcT56AbgMgQE5gCxDhCfhPJBtAEQT8WmmAmP328C8TkoG0Rfw6WQiYEKAFvgMQKxDBCzAjEfVAxEK0HD5Qkov6DnYnRDJgNxDh6LQfJ5hLxjQMD1hugCAAEGAHqkSL1sXGFXAAAAAElFTkSuQmCC");
@@ -54,10 +52,9 @@ img {
 }
 
 .btn {
-  display: inline-block;
+  display: inline-flex;
   padding: 10px 20px;
   text-transform: uppercase;
-  text-align: center;
   cursor: pointer;
   border-radius: 5px;
   font-size: 12px;
@@ -78,7 +75,7 @@ img {
   font-family: 'Lato', sans-serif;
 
   span {
-    display: block;
+    display: flex;
     font-size: 20px;
     color: #aebce3;
   }
@@ -102,6 +99,28 @@ img {
         }
       }
     }
+
+    &.is-active {
+
+      .step {
+
+        &:after {
+          background-image: linear-gradient(90deg, rgba(133,203,112,1), rgba(115,118,128,1));
+        }
+
+        &__text {
+          color: #e0e0e0;
+        }
+
+        &__ico {
+          border-color: #7dbc6c;
+          background: rgba(125,188,108,.3);
+        }
+
+      }
+
+    }
+
   }
 }
 
@@ -126,7 +145,6 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-
   }
 
   &__text {
@@ -139,22 +157,6 @@ img {
     text-transform: uppercase;
     font-size: 10px;
     letter-spacing: .8px;
-  }
-}
-
-.steps__el.is-active {
-
-  .step__text {
-    color: #e0e0e0;
-  }
-
-  .step__ico {
-    border-color: #7dbc6c;
-    background: rgba(125,188,108,.3);
-  }
-
-  .step:after {
-    background-image: linear-gradient(90deg, rgba(133,203,112,1), rgba(115,118,128,1));
   }
 }
 
@@ -194,6 +196,46 @@ img {
 
 }
 
+.date-time {
+  font-size: 10px;
+  color: #8b8b8b;
+  margin-bottom: 20px;
+}
+
+.location {
+  font-size: 8px;
+  margin-right: 15px;
+  position: relative;
+}
+
+.prize {
+  margin-right: 70px;
+
+  &__sum {
+    font-size: 14px;
+    color: #485ca1;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-size: 8px;
+    color: #858585;
+  }
+}
+
+.tournaments {
+  border-radius: 5px;
+  text-transform: uppercase;
+
+  &__title {
+    padding: 30px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #7a7d81;
+    background-color: #fff;
+  }
+}
+
 .tournament {
   position: relative;
   background-color: #ededed;
@@ -230,80 +272,31 @@ img {
     margin-top: 35px;
   }
 
-}
+  &.is-active {
+    background-color: #485ca1;
 
-.tournament.is-active {
-  background-color: #485ca1;
-  
-  .date-time,
-  .prize__sum,
-  .prize__text {
-    color: #dce4ff;
-  }
-
-  .tournament__name,
-  .location {
-    color: #fff;
-  }
-
-  .region {
-    &:after {
-      background-color: #394a85;
+    .date-time,
+    .prize__sum,
+    .prize__text {
+      color: #dce4ff;
     }
-  }
-  
-  .switcher {
-    &:after {
-      background-color: #85cb70;
+
+    .tournament__name,
+    .location {
+      color: #fff;
     }
-  }
-}
 
-.prize {
-  margin-right: 70px;
-}
+    .region {
+      &:after {
+        background-color: #394a85;
+      }
+    }
 
-.date-time {
-  font-size: 10px;
-  color: #8b8b8b;
-  margin-bottom: 20px;
-}
-
-.location {
-  font-size: 8px;
-  margin-right: 15px;
-  position: relative;
-}
-
-.prize {
-
-  &__sum {
-    font-size: 14px;
-    color: #485ca1;
-    margin-bottom: 10px;
-  }
-
-  &__text {
-    font-size: 8px;
-    color: #858585;
-  }
-}
-
-.tournament,
-.round {
-  cursor: pointer;
-}
-
-.tournaments {
-  border-radius: 5px;
-  text-transform: uppercase;
-
-  &__title {
-    padding: 30px;
-    font-size: 14px;
-    text-transform: uppercase;
-    color: #7a7d81;
-    background-color: #fff;
+    .switcher {
+      &:after {
+        background-color: #85cb70;
+      }
+    }
   }
 }
 
@@ -346,18 +339,23 @@ img {
     width: 100%;
     background-color: #73767f;
   }
-}
 
-.round.is-active {
-  background-color: #00D66D;
-  color: #1b2916;
-  border-radius: 3px;
+  &.is-active {
+    background-color: #00D66D;
+    color: #1b2916;
+    border-radius: 3px;
 
-  .switcher {
-    &:after {
-      background-color: #00D66D;
+    .switcher {
+      &:after {
+        background-color: #00D66D;
+      }
     }
   }
+}
+
+.tournament,
+.round {
+  cursor: pointer;
 }
 
 .switcher {
