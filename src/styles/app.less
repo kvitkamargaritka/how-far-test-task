@@ -1,0 +1,443 @@
+// Core
+@import "core/reset.less";
+@import "core/variables.less";
+@import "core/mixins.less";
+
+
+// Blocks
+
+body {
+  font-size: 13px;
+  line-height: 1.4;
+  font-family: 'Lato', sans-serif;
+  user-select: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.ico {
+  display: inline-block;
+  vertical-align: middle;
+
+  &_cup {
+    background: url("img/ico-cup.png");
+    width: 17px;
+    height: 17px;
+  }
+
+  &_person {
+    background: url("img/ico-person.png");
+    width: 17px;
+    height: 17px;
+  }
+
+  &_dollar {
+    background: url("img/ico-dollar.png");
+    width: 9px;
+    height: 17px;
+  }
+
+  &_persons {
+    background: url("img/ico-persons.png");
+    width: 23px;
+    height: 17px;
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 12px;
+
+  &_white {
+    background-color: #d7d7d7;
+    color: #707376;
+  }
+
+  &_grey {
+    background-color: #95999e;
+    color: #5f6369;
+  }
+}
+
+.title {
+  font-size: 22px;
+  color: #fff;
+  opacity: .78;
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+
+  span {
+    font-size: 20px;
+    color: #aebce3;
+  }
+}
+
+.steps {
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__el {
+    margin: 0 65px;
+
+    &:last-child {
+
+      .step {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.step {
+  position: relative;
+
+  &:after {
+    position: absolute;
+    top: 17px;
+    left: 50px;
+    content: '';
+    width: 100px;
+    height: 1px;
+    background-color: #737680;
+  }
+
+  &__ico {
+    width: 35px;
+    height: 35px;
+    border: 2px solid #737680;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  &__bottom {
+    //position: relative;
+  }
+
+  &__text {
+    position: absolute;
+    bottom: -20px;
+    left: 18px;
+    transform: translate(-50%);
+    color: #737680;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: .8px;
+  }
+}
+
+.steps__el.is-active {
+
+  .step__text {
+    color: #e0e0e0;
+  }
+
+  .step__ico {
+    border-color: #7dbc6c;
+    background: rgba(125,188,108,.3);
+  }
+
+  .step:after {
+    background-image: linear-gradient(90deg, rgba(133,203,112,1), rgba(115,118,128,1));
+  }
+}
+
+.app {
+  background-image: url("../img/bg.png");
+  background-size: cover;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+
+    .app__left {
+      width: 59%;
+    }
+
+    .app__right {
+      width: 39%;
+    }
+  }
+
+  &__title {
+    color: #dddddd;
+    font-size: 23px;
+    text-transform: uppercase;
+  }
+
+}
+
+.tournament {
+  position: relative;
+  background-color: #ededed;
+  padding: 20px 0 30px 30px;
+
+  &__head {
+
+  }
+
+  &__name {
+    font-size: 16px;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+  }
+
+  .region,
+  .city {
+    font-size: 8px;
+    margin-right: 15px;
+    position: relative;
+  }
+
+  .region {
+    &:after {
+      position: absolute;
+      top: 1px;
+      left: 73px;
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 50px;
+      background-color: #bababa;
+    }
+  }
+
+  &__prizes {
+    display: flex;
+    margin-top: 35px;
+  }
+
+}
+
+.tournament.is-active {
+  background-color: #485ca1;
+  
+  .date-time,
+  .prize__sum,
+  .prize__text {
+    color: #dce4ff;
+  }
+
+  .tournament__name,
+  .location {
+    color: #fff;
+  }
+  
+  .switcher {
+    &:after {
+      background-color: #85cb70;
+    }
+  }
+}
+
+.prize {
+  margin-right: 70px;
+}
+
+.date-time {
+  font-size: 10px;
+  color: #8b8b8b;
+  margin-bottom: 20px;
+}
+
+.location {
+  font-size: 8px;
+  margin-right: 15px;
+  position: relative;
+}
+
+.prize {
+
+  &__sum {
+    font-size: 14px;
+    color: #485ca1;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-size: 8px;
+    color: #858585;
+  }
+}
+
+.tournaments {
+  border-radius: 5px;
+  text-transform: uppercase;
+
+  &__title {
+    padding: 30px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #7a7d81;
+    background-color: #fff;
+  }
+}
+
+.rounds {
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    border-bottom: 1px solid #73767f;
+
+    .rules-link {
+      color: #6b7ebe;
+      font-size: 11px;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+  }
+
+  &__title {
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+}
+
+.round {
+  font-size: 16px;
+  color: #fff;
+  padding: 35px 0 40px 20px;
+  border-radius: 6px;
+  position: relative;
+}
+
+.round.is-active {
+  background-color: #85cb70;
+
+  .switcher {
+    &:after {
+      background-color: #85cb70;
+    }
+  }
+}
+
+.switcher {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  right: 20px;
+  border: 2px solid #7c7c7c;
+  background-color: #fff;
+  border-radius: 50%;
+
+  &:after {
+    position: absolute;
+    content: '';
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border-radius: 50%;
+  }
+}
+
+
+
+
+// DELETE ME
+//a {
+//  color: #4183c4;
+//  text-decoration: none;
+//}
+//
+//a:hover {
+//  text-decoration: underline;
+//}
+//
+//.tournament.is-active {
+//  background: #485ca1;
+//
+//  .tournament__name,
+//  .location {
+//    color: #fff;
+//  }
+//  .date-time,
+//  .prize__sum,
+//  .prize__text {
+//    color: #d2dfff;
+//  }
+//}
+//
+//.round.is-active {
+//  background: #85cb70;
+//}
+//
+//.tournament.is-active .switcher,
+//.round.is-active .switcher {
+//  background: yellowgreen;
+//}
+//
+//.tournament__prizes {
+//  display: flex;
+//  justify-content: space-between;
+//  margin: 20px 0 0;
+//}
+//
+//.switcher {
+//  width: 20px;
+//  height: 20px;
+//  position: absolute;
+//  top: 50%;
+//  margin-top: -10px;
+//  right: 20px;
+//  border: 1px solid #ccc;
+//  border-radius: 50%;
+//}
+//
+//.rounds {
+//  box-sizing: border-box;
+//  width: 600px;
+//  margin: 30px auto;
+//}
+//
+//.rounds__head {
+//  display: flex;
+//  justify-content: space-between;
+//}
+//
+//.round {
+//  display: flex;
+//  justify-content: space-between;
+//  padding-right: 20px;
+//}
+
+
+
+
+
+
+
+
