@@ -66,17 +66,24 @@ var App = React.createClass({
     return (
       <div className="app">
         <div className="container">
+
           <div className="app__top">
             <div className="app__left">
-              <Title />
+              <h3 className="title">
+                golf <span> hole in one</span>
+              </h3>
             </div>
+
             <div className="app__center">
               <Steps />
             </div>
+
             <div className="app__right">
-              <Btn />
+              <Btn>Exit</Btn>
+              <Btn color="is-grey">Next</Btn>
             </div>
           </div>
+
           <div className="app__bottom">
             <div className="app__left">
               <h3 className="tournaments__title">tournaments</h3>
@@ -98,21 +105,6 @@ var App = React.createClass({
   }
 });
 
-var Title = React.createClass ({
-
-  render: function() {
-
-    return (
-      <h3 className="title">
-        golf
-      <span>
-        hole in one
-      </span>
-      </h3>
-    );
-  }
-});
-
 var Steps = React.createClass ({
 
   render: function() {
@@ -121,55 +113,19 @@ var Steps = React.createClass ({
       <div className="steps">
         <ul className="steps__list">
           <li className="steps__el is-active">
-            <div className="step">
-              <div className="step__top">
-                <div className="step__ico">
-                  <i className="ico ico_cup"></i>
-                </div>
-              </div>
-              <div className="step__bottom">
-                <span className="step__text">select round</span>
-              </div>
-            </div>
+            <Step ico="cup" text="select round" shade={true}/>
           </li>
 
           <li className="steps__el">
-            <div className="step">
-              <div className="step__top">
-                <div className="step__ico">
-                  <i className="ico ico_person"></i>
-                </div>
-              </div>
-              <div className="step__bottom">
-                <span className="step__text">select candidates</span>
-              </div>
-            </div>
+            <Step ico="person" text="select candidates"/>
           </li>
 
           <li className="steps__el">
-            <div className="step">
-              <div className="step__top">
-                <div className="step__ico">
-                  <i className="ico ico_dollar"></i>
-                </div>
-              </div>
-              <div className="step__bottom">
-                <span className="step__text">entry fee</span>
-              </div>
-            </div>
+            <Step ico="dollar" text="entry fee"/>
           </li>
 
           <li className="steps__el">
-            <div className="step">
-              <div className="step__top">
-                <div className="step__ico">
-                  <i className="ico ico_persons"></i>
-                </div>
-              </div>
-              <div className="step__bottom">
-                <span className="step__text">invite friends</span>
-              </div>
-            </div>
+            <Step ico="persons" text="invite friends"/>
           </li>
         </ul>
       </div>
@@ -177,16 +133,49 @@ var Steps = React.createClass ({
   }
 });
 
+
+var Step = React.createClass ({
+
+  render: function() {
+
+    return (
+      <div className="step">
+        <div className="step__top">
+          <div className="step__ico">
+            <Icon ico={this.props.ico}/>
+            {this.props.shade ? <span className="step__shade"></span> : null}
+          </div>
+        </div>
+        <div className="step__bottom">
+          <span className="step__text">{this.props.text}</span>
+        </div>
+      </div>
+    );
+  }
+});
+
+var Icon = React.createClass ({
+
+  render: function() {
+    var cls = 'ico',
+        ico = this.props.ico;
+
+    return (
+      <i className={ico ? cls + ' ' + cls + '-' + ico : cls}></i>
+    );
+  }
+});
+
 var Btn = React.createClass ({
 
   render: function() {
-    var cls = 'btn ';
+    var cls = 'btn ',
+        color = this.props.color;
 
     return (
-      <div className="action">
-        <span className={cls}>exit</span>
-        <span className={cls + 'is-grey'}>next</span>
-      </div>
+        <span className={color ? cls + color : cls}>
+          {this.props.children}
+        </span>
     );
   }
 });
@@ -234,9 +223,9 @@ var Tournament = React.createClass({
     var cls = 'tournament';
 
     return (
-      <article
-        className={this.props.active == this.props.id ? cls + ' is-active' : cls}
-        onClick={this.props.onClick}>
+      <article className={this.props.active == this.props.id ? cls + ' is-active' : cls}
+               onClick={this.props.onClick}>
+
         <header className="tournament__head">
           <DateTime
             start={this.props.start}
@@ -256,12 +245,24 @@ var Tournament = React.createClass({
           <Prize value={this.props.fedezPoints} label="Fedez points"/>
         </div>
 
-        <span className="switcher"></span>
+        <Switcher mod="is-abs"/>
       </article>
     );
   }
 });
 
+
+var Switcher = React.createClass({
+
+  render: function () {
+    var cls = 'switcher ',
+        mod = this.props.mod;
+
+    return (
+      <span className={mod ? cls + mod : cls}></span>
+    );
+  }
+});
 
 var Prize = React.createClass({
 
@@ -342,15 +343,14 @@ var Round = React.createClass({
   render: function () {
     var cls = 'round';
 
-    return <div
-      className={this.props.active == this.props.id ? cls + ' is-active' : cls}
-      onClick={this.props.onClick}>
+    return <div className={this.props.active == this.props.id ? cls + ' is-active' : cls}
+                onClick={this.props.onClick}>
       <div className="round__left">
         <span>Round </span>
         <span>{this.props.value}</span>
       </div>
       <div className="round__right">
-        <span className="switcher"></span>
+        <Switcher/>
       </div>
     </div>;
   }

@@ -21,26 +21,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="example.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="example.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/scripts/example.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.386454">
-              <caret line="112" column="3" selection-start-line="112" selection-start-column="3" selection-end-line="112" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="157" column="0" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.less" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.less" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/styles/app.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="102.15385">
-              <caret line="197" column="0" selection-start-line="197" selection-start-column="0" selection-end-line="197" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.12571429">
+              <caret line="253" column="28" selection-start-line="253" selection-start-column="28" selection-end-line="253" selection-end-column="28" />
               <folding>
                 <element signature="e#376#2137#2" expanded="true" />
                 <element signature="e#2208#3917#2" expanded="true" />
                 <element signature="e#3988#5729#2" expanded="true" />
                 <element signature="e#5800#7705#2" expanded="true" />
+                <element signature="e#9238#16499#2" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -65,8 +66,8 @@
         <option value="$PROJECT_DIR$/src/styles/blocks/tournament.less" />
         <option value="$PROJECT_DIR$/src/styles/core/template.less" />
         <option value="$PROJECT_DIR$/src/styles/core/variables.less" />
-        <option value="$PROJECT_DIR$/src/styles/app.less" />
         <option value="$PROJECT_DIR$/public/scripts/example.js" />
+        <option value="$PROJECT_DIR$/src/styles/app.less" />
       </list>
     </option>
   </component>
@@ -405,6 +406,7 @@
             <element signature="e#2208#3917#2" expanded="true" />
             <element signature="e#3988#5729#2" expanded="true" />
             <element signature="e#5800#7705#2" expanded="true" />
+            <element signature="e#9238#16499#2" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -481,24 +483,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/scripts/example.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="157" column="0" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/app.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="102.15385">
-          <caret line="197" column="0" selection-start-line="197" selection-start-column="0" selection-end-line="197" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.12571429">
+          <caret line="253" column="28" selection-start-line="253" selection-start-column="28" selection-end-line="253" selection-end-column="28" />
           <folding>
             <element signature="e#376#2137#2" expanded="true" />
             <element signature="e#2208#3917#2" expanded="true" />
             <element signature="e#3988#5729#2" expanded="true" />
             <element signature="e#5800#7705#2" expanded="true" />
+            <element signature="e#9238#16499#2" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/scripts/example.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.386454">
-          <caret line="112" column="3" selection-start-line="112" selection-start-column="3" selection-end-line="112" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
